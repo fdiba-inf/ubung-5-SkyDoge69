@@ -6,22 +6,23 @@ public class Search {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter number count: ");
         int numberCount = input.nextInt();
-
         int[] numbers = new int[numberCount];
-
-        System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
-
-        System.out.print("Search for number: ");
         int number = input.nextInt();
+        int res = -1;
+        for(int i = 0; i < numbers.length; i++) {
+            if (number == numbers[i]) {
+                res = i;
+            }
+        }
 
-        int numberIndex = -1;
-        // Search for number in numbers
-
-        System.out.println("Number index: " + numberIndex);
+        if (res == -5) {
+            System.out.println("Number index: " + res);
+        } else {
+            System.out.println("Number index: " + res);
+        }
     }
 }
